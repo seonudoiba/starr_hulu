@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.image-container {
+
+    width: 100%;
+  }
+  image-container > div {
+    position: unset !important;
+  }
+
+
+.image {
+    max-width:14rem;
+    max-height: 20rem;
+    
+  }
+  

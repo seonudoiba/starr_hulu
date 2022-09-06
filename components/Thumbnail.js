@@ -11,12 +11,15 @@ export const Thumbnail = ({result}) => {
   return (
     
     <div  className=" group ">
-        <div className="group-hover:scale-105  transition transform ">
+        <div className="md:group-hover:scale-105  transition transform ">
+        <div className={'image-container'}>
         <Image 
-        height= {220}
-        width= {320} 
-        layout="responsive"
+        className='image'
+        // max-height= {220}
+        // max-width= {320} 
+        layout="fill"
         src={`${base}${result.backdrop_path}`} />
+        </div>
         </div>
          <div>
             <p className="truncate px-1 py-1 text-sm cursor-pointer">{result.overview}</p>
