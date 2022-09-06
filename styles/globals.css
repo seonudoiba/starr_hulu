@@ -4,16 +4,10 @@
 
 .image-container {
 
-    width: 100%;
-  }
-  image-container > div {
-    position: unset !important;
+    width: 320px;
+    height: 220px;
   }
 
-
-.image {
-    max-width:14rem;
-    max-height: 20rem;
+@media screen {
     
-  }
-  
+}
