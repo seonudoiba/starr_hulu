@@ -1,11 +1,27 @@
 import React from "react";
+import { useState , useContext} from "react";
 import Image from "next/image";
-import { SearchIcon, StarIcon, HeartIcon } from "@heroicons/react/solid";
+import {
+  SearchIcon,
+  StarIcon,
+  HeartIcon,
+  BriefcaseIcon,
+} from "@heroicons/react/solid";
+import FavContext from "../pages/index";
 
 export const Thumbnail = ({ result }) => {
   let base = "https://image.tmdb.org/t/p/original/";
   let rating = result.vote_average;
   let rate = Math.round(rating / 2);
+  let [favourite, setfavourite] = useState("");
+
+
+ 
+
+  let handleFavourites = () => {
+    setfavourite(result.title);
+    console.log(star);
+  };
 
   return (
     <div className=" group ">
@@ -36,7 +52,11 @@ export const Thumbnail = ({ result }) => {
             <StarIcon className="rate fill-yellow-400 w-4 h-4" />
           ))}
         </div>
-        <HeartIcon className={'rate fill-red-600 w-5 h-5 absolute right-0'}/>
+        <HeartIcon
+          onClick={handleFavourites}
+          className={"rate fill-red-600 w-5 h-5 absolute right-0"}
+        />
+        {/* <BriefcaseIcon  className={'rate fill-red-600 w-5 h-5 absolute right-0'}/> */}
         {/* <p className=" pl-2 font-bold text-sm">{result.release_date}</p> */}
       </div>
     </div>
