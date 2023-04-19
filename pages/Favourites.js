@@ -1,4 +1,5 @@
 import React from 'react'
+import { uuid } from 'uuidv4';
 
 const Favourites = () => {
     let favorites = ['starr']
