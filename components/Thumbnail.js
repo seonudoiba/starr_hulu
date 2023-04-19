@@ -29,6 +29,7 @@ export const Thumbnail = ({ result }) => {
         <div className="image-container">
           <Image
             className="image"
+            alt="images"
             // max-height= {220}
             // max-width= {320}
             layout="fill"
