@@ -4,7 +4,7 @@ const Favourites = () => {
     let favorites = ['starr']
   return (
     <div>
-        {favorites.map(favorite=> <div key={favorite.index}>{favorite}</div>)}
+        {favorites.map(favorite=> <div key={uuid()}>{favorite}</div>)}
     </div>
   )
 }
