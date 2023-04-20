@@ -3,7 +3,7 @@ const Favourites = () => {
     let favorites = ['starr']
   return (
     <div>
-        {favorites.map(favorite=> <div key={Math.random()}>{favorite}</div>)}
+        {favorites.map((favorite,index)=> <div key={index}>{favorite}</div>)}
     </div>
   )
 }
