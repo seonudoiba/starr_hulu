@@ -49,8 +49,8 @@ export const Thumbnail = ({ result }) => {
         <p className="font-bold text-sm">Rating: {rating}</p>
 
         <div className="flex px-1">
-          {[...Array(rate)].map((rate) => (
-            <StarIcon className="rate fill-yellow-400 w-4 h-4" />
+          {[...Array(rate)].map((rate, i) => (
+            <StarIcon key={i} className="rate fill-yellow-400 w-4 h-4" />
           ))}
         </div>
         <HeartIcon
