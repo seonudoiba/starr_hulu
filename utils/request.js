@@ -1,9 +1,11 @@
-let API_KEY = process.env.API_KEY;
+let API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+
+console.log(API_KEY, "API_KEY");
 
 export default{
     Trending: {
         title: 'Trending',
-        url:`/trending/all/week?api_key=${API_KEY}&language=en-US`
+        url:`/trending/all/week?api_key=${API_KEY}&language=en-US`,
     },
     TopRated: {
         title: 'Top Rated',
