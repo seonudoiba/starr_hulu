@@ -10,12 +10,14 @@
   },
   "dependencies": {
     "@heroicons/react": "^1.0.6",
+    "@node-rs/jieba-win32-ia32-msvc": "^1.6.2",
     "next": "12.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tailwind-scrollbar-hide": "^1.1.7"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.18.6",
     "autoprefixer": "^10.4.7",
     "eslint": "8.18.0",
     "eslint-config-next": "12.1.6",
