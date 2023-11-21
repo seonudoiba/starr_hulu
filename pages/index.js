@@ -11,7 +11,7 @@ export default function Home({ results }) {
   // let fav = (favourite) => {
   //   return favourite;
   // };
-  let star ="hello world"
+  let star =4
   return (
     <div>
       <Head>
