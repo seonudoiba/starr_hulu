@@ -33,7 +33,8 @@ export default function Home({ results }) {
 export async function getServerSideProps(context) {
   let genre = context.query.genre;
   console.log(genre, "genre");
-  const request = await fetch(`https://api.themoviedb.org/3${requests[genre]?.url || requests.Trending.url}`)
+  //const request = await fetch(`https://api.themoviedb.org/3${requests[genre]?.url || requests.Trending.url}`)
+  const request = await fetch(`https://api.themoviedb.org/3/trending/all/week?api_key=d90250cf6160951db8f4f8c9b0d644a3`)
   .then((response) => response.json())
   .catch((err) => console.log(err));
   return {
