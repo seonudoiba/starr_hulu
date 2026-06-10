@@ -1,0 +1,8 @@
+flowchart TD
+    A[Trigger: API / webhook / job] --> B{Creates or finds lead?}
+    B -->|New email/phone| C[INSERT into leads]
+    B -->|Existing lead| D[UPDATE leads fields]
+    A --> E[INSERT into lead_events]
+    E --> F[ScoreLeadJob queued]
+    F --> G[SUM lead_events.score_change]
+    G --> H[UPDATE leads.score + status]
